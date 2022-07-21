@@ -1,21 +1,15 @@
 package me.pavelshvartsberg.chapter1
 
 interface QuackBehavior {
-    fun quack(duck: Duck)
+    fun quack(duck: Duck): String
 }
 
-class Quack: QuackBehavior {
-    override fun quack(duck: Duck) {
-        println("${duck.name} quacks")
-    }
+internal class Quack: QuackBehavior {
+    override fun quack(duck: Duck) = "${duck.name} quacks"
 }
-class Squeak: QuackBehavior {
-    override fun quack(duck: Duck) {
-        println("${duck.name} squeaks")
-    }
+internal class Squeak: QuackBehavior {
+    override fun quack(duck: Duck) = "${duck.name} squeaks"
 }
-class MuteQuack: QuackBehavior {
-    override fun quack(duck: Duck) {
-        println("${duck.name} mutes")
-    }
+internal class MuteQuack: QuackBehavior {
+    override fun quack(duck: Duck) = "${duck.name} mutes"
 }

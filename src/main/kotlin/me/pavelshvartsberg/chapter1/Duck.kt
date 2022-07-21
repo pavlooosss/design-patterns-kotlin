@@ -21,6 +21,18 @@ data class Duck(
             flyBehavior = FlyWithWings(),
             quackBehavior = Quack()
         )
+        fun redHeadDuck(name: String = "Default mallard duck name"): Duck = Duck(
+            name = name,
+            duckType = DuckType.RED_HEAD,
+            flyBehavior = FlyWithWings(),
+            quackBehavior = MuteQuack()
+        )
+        fun rubberDuck(name: String = "Default mallard duck name"): Duck = Duck(
+            name = name,
+            duckType = DuckType.RUBBER,
+            flyBehavior = NoFly(),
+            quackBehavior = Squeak()
+        )
     }
 }
 

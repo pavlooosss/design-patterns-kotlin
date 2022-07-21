@@ -4,14 +4,14 @@ interface FlyBehavior {
     fun fly(duck: Duck): String
 }
 
-class FlyWithWings : FlyBehavior {
+internal class FlyWithWings : FlyBehavior {
     override fun fly(duck: Duck): String {
         return "${duck.name} flies with wings"
     }
 }
 
-class NoFly : FlyBehavior {
+internal class NoFly : FlyBehavior {
     override fun fly(duck: Duck): String {
-        return "${duck.name}  can not fly!"
+        return "${duck.name} can not fly!"
     }
 }

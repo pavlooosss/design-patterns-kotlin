@@ -8,6 +8,22 @@ internal class DuckTest() {
     fun testMallardDuck() {
         val duck = Duck.mallardDuck("TEST_DUCK")
         assertEquals("TEST_DUCK flies with wings", duck.fly())
+        assertEquals("TEST_DUCK quacks", duck.quack())
     }
+
+    @Test
+    fun testRedHadDuck() {
+        val duck = Duck.redHeadDuck("TEST_DUCK")
+        assertEquals("TEST_DUCK flies with wings", duck.fly())
+        assertEquals("TEST_DUCK mutes", duck.quack())
+    }
+
+    @Test
+    fun testRubberDuck() {
+        val duck = Duck.rubberDuck("TEST_DUCK")
+        assertEquals("TEST_DUCK can not fly!", duck.fly())
+        assertEquals("TEST_DUCK squeaks", duck.quack())
+    }
+
 }
 
